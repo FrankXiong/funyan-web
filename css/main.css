@@ -433,20 +433,15 @@ nav a {
 
 
 .footer{
-  min-height: 100px;
+  height: 100px;
   background-color: rgb(34,39,44);
   text-align: center;
-  position: relative;
-  bottom: -25px;  /*this is a problem*/
-  display: flex;
-  align-item:center;
-  justify-content:center;
 }
 .footer p{
   color: #fff;
   font-size: 16px;
+  line-height: 100px;
 }
 .footer a{
-  text-decoration: underline;
   color: #fff;
 }
