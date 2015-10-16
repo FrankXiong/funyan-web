@@ -43,9 +43,6 @@ p{
   color: #444;
   text-align: center;
 }
-p.user-name{
-  text-align: right;
-}
 h1 {
   font-size: 6vw;
   color: #ff3747;
@@ -365,11 +362,18 @@ nav a {
   display: flex;
   align-items:center;
 }
-#section-four .user-evaluate-box{
-  margin: 20px 0;
-  overflow: hidden;
-}
 
+#section-four .user-evaluate-box{
+  margin: 20px auto;
+  overflow: hidden;
+  width: 720px;
+}
+.user-words{
+  font-size: 24px;
+}
+.user-name{
+  font-size: 14px;
+}
 
 
 
