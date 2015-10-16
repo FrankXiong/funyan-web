@@ -440,6 +440,8 @@ nav a {
   height: 100px;
   background-color: rgb(34,39,44);
   text-align: center;
+  position: relative;
+  bottom: -15px;
 }
 .footer p{
   color: #fff;
