@@ -347,26 +347,26 @@ nav a {
     width: 90%;
   }
   p {
-    font-size: 6vw;
-  }
-  h1 {
-    font-size: 10vw;
-  }
-  h2 {
     font-size: 8vw;
   }
+  h1 {
+    font-size: 12vw;
+  }
+  h2 {
+    font-size: 10vw;
+  }
   h3 {
-    font-size: 6vw;
+    font-size: 8vw;
   }
   
   nav {
     padding: 10px;
   }
   nav a {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     padding: 2vw;
-    font-size: 8vw;
+    font-size: 12vw;
   }
   .cover h1 {
     padding: 15px;
