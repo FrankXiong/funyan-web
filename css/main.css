@@ -32,11 +32,7 @@ a{
   display: inline-block;
 }
 
-@media screen and(min-width: 720px){
-  a{
-    font-size: 5vw;
-  }
-}
+
 h1, h2, h3, p,textarea {
   letter-spacing: 0.05em;
   line-height: 125%;
@@ -50,34 +46,16 @@ p{
   text-align: center;
 }
 
-@media screen and (min-width: 720px) {
-  p {
-    font-size: 1.5vw;
-  }
-}
 h1 {
   font-weight: 300;
   color: #222;
 }
 
-@media screen and (min-width: 720px) {
-  h1 {
-    font-size: 4vw;
-  }
-}
-
 h2 {
-  line-height: 200%;
   text-align: center;
   font-weight: 300;
   color: #222;
   z-index: 1;
-}
-
-@media screen and (min-width: 720px) {
-  h2 {
-    font-size: 2.5vw;
-  }
 }
 
 h3 {
@@ -87,11 +65,6 @@ h3 {
   font-weight: 300;
 }
 
-@media screen and (min-width: 720px) {
-  h3 {
-    font-size: 1.5vw;
-  }
-}
 section {
   padding-top: 8vw;
   position: relative;
@@ -107,15 +80,9 @@ section {
     padding-top: 60px;
   }
 }
-section:last-of-type {
-  padding-bottom: 5vw;
-}
 
-@media screen and (min-width: 720px) {
-  section:last-of-type {
-    padding-bottom: 0px;
-  }
-}
+
+
 
 
 /*navigation start*/
@@ -132,11 +99,7 @@ nav {
   top: 0;
 }
 
-@media screen and (min-width: 720px) {
-  nav {
-    padding: 1vw;
-  }
-}
+
 nav a {
   
   padding-top: 0 !important;
@@ -149,14 +112,6 @@ nav a {
   border-left: 1px solid #575e68;
 }
 
-@media screen and (min-width: 720px) {
-  nav a {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    padding: 1vw;
-    font-size: 6vw;
-  }
-}
 /*navigation ends*/
 
 /*cover begin*/
@@ -232,16 +187,7 @@ nav a {
   display: inline-block;
   float: right;
 }
-@media screen and (max-width: 720px) {
-  .cover h1 {
-    padding: 15px;
-  }
-}
-@media screen and (min-width: 720px) {
-  .cover h1 {
-    padding: 60px;
-  }
-}
+
 /*cover ends*/
 
 .content {
@@ -282,23 +228,17 @@ nav a {
 
 
 #section-two .gn-box{
-  width: 200px;
+  width: 30%;
   height: 300px;
   margin: 20px;
-  display: flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  display:-ms-flexbox;
   flex-direction:column;
   justify-content:space-between;
 }
-@media screen and (min-width: 720px){
-  #section-two .gn-box{
-    width: 30%;
-    padding: 2vw;
-    margin-bottom: 5vh;
-    display: flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-}
+
 #section-two .gn-box img{
   width: 120px;
   height: 100px;
@@ -309,8 +249,13 @@ nav a {
 }
 #section-two .gn-box-wrapper{
   /*border: 1px solid #333;*/
-  display: flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  display:-ms-flexbox;
   justify-content:space-around;
+  flex-wrap:wrap;
+  box-align:center;
 }
 #section-three{
   margin-bottom: 100px;
@@ -324,14 +269,11 @@ nav a {
   width: 40px;
   height: 40px;
   margin: 40px;
-  display: flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  display:-ms-flexbox;
   align-items:center;
-}
-@media screen and (min-width: 720px){
-  #section-three .contact-box{
-    width: 5vw;
-    height: 5vh;
-  }
 }
 
 #section-four .user-evaluate-box{
@@ -339,18 +281,12 @@ nav a {
   overflow: hidden;
   width: 720px;
 }
-@media screen and (min-width: 720px){
-  .user-name{
-    font-size: 1vw;
-  }
-}
 
 .footer{
   height: 10vh;
   background-color: rgb(34,39,44);
   text-align: center;
-  position: relative;
-  bottom: -15px;
+  
 }
 .footer p{
   color: #fff;
@@ -360,18 +296,67 @@ nav a {
 .footer a{
   color: #fff;
 }
-@media screen and(max-width: 720px){
+
+@media all and (min-width: 720px){
+  p {
+    font-size: 1.5vw;
+  }
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 2vw;
+    line-height: 200%;
+  }
+  h3 {
+    font-size: 1.5vw;
+  }
+  nav {
+    padding: 1vw;
+  }
+  nav a {
+    
+    padding: 1vw;
+    font-size: 6vw;
+  }
+  .cover h1 {
+    padding: 60px;
+  }
+  #section-two .gn-box{
+  width: 20%;
+  height: 300px;
+  margin: 20px;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:flex;
+  display:-ms-flexbox;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+  #section-three .contact-box{
+    width: 5vw;
+    height: 5vh;
+  }
+  .user-name{
+    font-size: 1vw;
+  }
+}
+@media all and (max-width: 720px){
+  .content{
+    width: 90%;
+  }
   a{
     font-size: 5vw;
   }
   p {
-    font-size: 10vw;
+    font-size: 5vw;
   }
   h1 {
     font-size: 8vw;
   }
   h2 {
-    font-size: 20px;
+    font-size: 6vw;
   }
   h3 {
     font-size: 4vw;
@@ -381,14 +366,55 @@ nav a {
     padding: 10px;
   }
   nav a {
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     padding: 2vw;
     font-size: 6vw;
+  }
+  .cover h1 {
+    padding: 15px;
+  }
+  .btn{
+    width: 30vw;
+    padding:15px 0px;
+  }
+  .cover .download{
+    position: absolute;
+    left: 30%;
+    top: 55%;
+  }
+  .cover .download:hover{
+    background-color: rgba(0,0,244,0.5);
+  }
+  .cover .more{
+    position: absolute;
+    left: 70%;
+    top: 55%;
+    padding: 13px 0;
+  }
+  #section-two{
+    width: 90%;
+    overflow: auto;
+  }
+  #section-two .gn-box{
+    width: 80%;
+    height: 300px;
+    margin: 20px;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:flex;
+    display:-ms-flexbox;
+    flex-direction:column;
+    justify-content:space-between;
   }
    #section-three .contact-box{
     width: 8vw;
     height: 8vw;
+  }
+  #section-four .user-evaluate-box{
+    margin: 20px auto;
+    overflow: hidden;
+    width: 90%;
   }
   .user-name{
     font-size: 3vw;
@@ -397,3 +423,5 @@ nav a {
     font-size: 2vw;
   }
 }
+
+
