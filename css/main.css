@@ -74,9 +74,9 @@ h2 {
   z-index: 1;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
   h2 {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 
@@ -341,7 +341,7 @@ nav a {
 }
 @media screen and (min-width: 720px){
   .user-name{
-    font-size: 1.vw;
+    font-size: 1vw;
   }
 }
 
@@ -365,7 +365,7 @@ nav a {
     font-size: 5vw;
   }
   p {
-    font-size: 5vw;
+    font-size: 10vw;
   }
   h1 {
     font-size: 8vw;
@@ -376,9 +376,7 @@ nav a {
   h3 {
     font-size: 4vw;
   }
-  section:last-of-type {
-    padding-bottom: 0px;
-  }
+  
   nav {
     padding: 10px;
   }
