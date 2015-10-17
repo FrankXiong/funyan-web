@@ -332,7 +332,6 @@ nav a {
   display:-ms-flexbox;
   flex-direction:column;
   justify-content:space-between;
-  align-items:flex-start;
 }
   #section-three .contact-box{
     width: 5vw;
@@ -347,16 +346,16 @@ nav a {
     width: 90%;
   }
   p {
-    font-size: 5vw;
+    font-size: 4vw;
   }
   h1 {
-    font-size: 10vw;
-  }
-  h2 {
     font-size: 8vw;
   }
+  h2 {
+    font-size: 6vw;
+  }
   h3 {
-    font-size: 5vw;
+    font-size: 4vw;
   }
   
   nav {
@@ -366,7 +365,7 @@ nav a {
     margin-top: 1vw;
     margin-bottom: 1vw;
     padding: 2vw;
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .cover h1 {
     padding: 15px;
@@ -391,7 +390,6 @@ nav a {
   }
   #section-two{
     width: 90%;
-    overflow: auto;
   }
   #section-two .gn-box{
     width: 100%;
@@ -403,6 +401,7 @@ nav a {
     display:-ms-flexbox;
     flex-direction:column;
     justify-content:space-between;
+    align-items:center;
   }
    #section-three .contact-box{
     width: 8vw;
@@ -417,7 +416,7 @@ nav a {
     font-size: 3vw;
   }
   .footer p{
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
