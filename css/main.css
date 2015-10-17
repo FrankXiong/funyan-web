@@ -118,7 +118,6 @@ nav a {
 .cover {
   height: 100vh;
   box-sizing: border-box;
-  background-image: url(../img/bg.png);
   z-index: 3;
 }
 .btn{
@@ -319,6 +318,9 @@ nav a {
     padding: 1vw;
     font-size: 6vw;
   }
+  .cover{
+    background-image: url(../img/bg.png);
+  }
   .cover h1 {
     padding: 60px;
   }
@@ -373,6 +375,9 @@ nav a {
   .btn{
     width: 30vw;
     padding:15px 0px;
+  }
+  .cover{
+    background-image: url(../img/bg.webp); 
   }
   .cover .download{
     position: absolute;
