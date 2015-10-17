@@ -401,7 +401,7 @@ nav a {
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
   }
   /*#section-two .gn-box h2,#section-two .gn-box p,#section-two .gn-box img{
     border: 1px solid blue;
