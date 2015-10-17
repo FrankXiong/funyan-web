@@ -377,6 +377,7 @@ nav a {
     padding:15px 0px;
   }
   .cover{
+    background-image: url(../img/bg.png); 
     background-image: url(../img/bg.webp); 
   }
   .cover .download{
