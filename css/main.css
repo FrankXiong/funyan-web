@@ -346,20 +346,17 @@ nav a {
   .content{
     width: 90%;
   }
-  a{
-    font-size: 5vw;
-  }
   p {
-    font-size: 5vw;
-  }
-  h1 {
-    font-size: 8vw;
-  }
-  h2 {
     font-size: 6vw;
   }
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 8vw;
+  }
   h3 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   
   nav {
@@ -369,7 +366,7 @@ nav a {
     margin-top: 2vw;
     margin-bottom: 2vw;
     padding: 2vw;
-    font-size: 6vw;
+    font-size: 8vw;
   }
   .cover h1 {
     padding: 15px;
@@ -397,7 +394,7 @@ nav a {
     overflow: auto;
   }
   #section-two .gn-box{
-    width: 80%;
+    width: 100%;
     height: 300px;
     margin: 20px;
     display:-webkit-flex;
