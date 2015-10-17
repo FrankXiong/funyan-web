@@ -40,8 +40,6 @@ h1, h2, h3, p,textarea {
 }
 p{
   line-height: 120%;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
   color: #444;
   text-align: center;
 }
@@ -253,6 +251,7 @@ nav a {
   display:flex;
   display:-ms-flexbox;
   justify-content:space-around;
+  /*如果 flex-wrap 设置为 wrap，在一个伸缩行容不下所有伸缩项目时，伸缩项目会换行到一条新增的伸缩行上。新增的伸缩行根据侧轴的方向添加。*/
   flex-wrap:wrap;
   box-align:center;
 }
@@ -267,11 +266,13 @@ nav a {
 #section-three .contact-box{
   width: 40px;
   height: 40px;
-  margin: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
   display:-webkit-flex;
   display:-moz-flex;
   display:flex;
   display:-ms-flexbox;
+  flex-direction:row;
   align-items:center;
 }
 
@@ -299,6 +300,8 @@ nav a {
 @media all and (min-width: 720px){
   p {
     font-size: 1.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
   h1 {
     font-size: 4vw;
@@ -314,7 +317,6 @@ nav a {
     padding: 1vw;
   }
   nav a {
-    
     padding: 1vw;
     font-size: 6vw;
   }
@@ -325,15 +327,15 @@ nav a {
     padding: 60px;
   }
   #section-two .gn-box{
-  width: 20%;
-  height: 300px;
-  margin: 20px;
-  display:-webkit-flex;
-  display:-moz-flex;
-  display:flex;
-  display:-ms-flexbox;
-  flex-direction:column;
-  justify-content:center;
+    width: 20%;
+    height: 300px;
+    margin: 20px;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:flex;
+    display:-ms-flexbox;
+    flex-direction:column;
+    justify-content:center;
 }
   #section-three .contact-box{
     width: 5vw;
@@ -341,6 +343,18 @@ nav a {
   }
   .user-name{
     font-size: 1vw;
+  }
+  .footer{
+    height: 8vh;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .footer p{
+    font-size: 1vw;
+    line-height: 100%;
   }
 }
 @media all and (max-width: 720px){
@@ -418,6 +432,7 @@ nav a {
    #section-three .contact-box{
     width: 8vw;
     height: 8vw;
+
   }
   #section-four .user-evaluate-box{
     margin: 20px auto;
@@ -427,9 +442,315 @@ nav a {
   .user-name{
     font-size: 3vw;
   }
+  .footer{
+    height: 12vh;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
   .footer p{
     font-size: 3vw;
+    line-height: 3vh;
   }
 }
+.watch-video{
+  color: rgba(0,0,244,0.3);
+}
+.watch-video:hover{
+  color: #333;
+}
+
+.video-wrap {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.video-wrap--show {
+  pointer-events: auto;
+}
+
+.video-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  background: black;
+}
+
+.video-wrap--show .video-inner {
+  opacity: 1;
+}
+
+.video-player {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate3d(0,-50%,0);
+  transform: translate3d(0,-50%,0);
+}
+
+/* Content */
+.content {
+  position: relative;
+}
+
+/* Loader */
+.loader {
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+
+.video-loaded .loader {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+/* Button */
+.action {
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 1em 2em;
+  color: #fff;
+  border: 2px solid;
+  border-radius: 40px;
+  background: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+.action:focus {
+  outline: none;
+}
+
+.action__label {
+  display: inline-block;
+  margin: 0 0 0 0.75em;
+}
+
+.action__label--hidden {
+  position: absolute;
+  top: 200%;
+}
+
+.action--play {
+  display: block;
+  margin: 1em auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s 0.1s;
+  transition: opacity 0.3s 0.1s;
+}
+
+.video-loaded .action--play {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.action--close {
+  line-height: 1;
+  position: absolute;
+  z-index: 1000;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: scale3d(0.7,0.7,1);
+  transform: scale3d(0.7,0.7,1);
+}
+
+.video-wrap--show .action--close {
+  opacity: 1;
+  -webkit-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+
+@media screen and (min-width: 25em) {
+  .video-inner {
+    width: 30vw;
+    height: 30vw;
+    border: 20px solid #fff;
+    -webkit-transform: scale3d(0.1,0.1,1) rotate3d(0,0,1,-5deg);
+    transform: scale3d(0.1,0.1,1) rotate3d(0,0,1,-5deg);
+  }
+  .video-wrap--show .video-inner {
+    opacity: 0;
+    -webkit-animation: showVideo-1 1.25s forwards;
+    animation: showVideo-1 1.25s forwards;
+  }
+  .video-wrap--hide .video-inner {
+    -webkit-animation: hideVideo 1.25s forwards;
+    animation: hideVideo 1.25s forwards;
+  }
+  .video-player {
+    left: 50%;
+    width: auto;
+    height: 100vh;
+    -webkit-transition: -webkit-transform 1s;
+    transition: transform 1s;
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(0.7,0.7,1) rotate3d(0,0,1,5deg);
+    transform: translate3d(-50%,-50%,0) scale3d(0.7,0.7,1) rotate3d(0,0,1,5deg);
+  }
+  .video-wrap--show .video-player,
+  .video-wrap--hide .video-player {
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+    transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+  }
+}
+
+/* This is the same as an aspect ratio of 16/9.
+Here we take the viewport height as main measure
+and size the video-inner accordingly.
+The video itself will use the viewport width as main 
+measure so that we ensure a filling of the screen.
+*/
+@media screen and (min-width: 25em) and (min-aspect-ratio: 1280/720) {
+  .video-inner {
+    width: 30vh;
+    height: 30vh;
+  }
+  .video-wrap--show .video-inner {
+    -webkit-animation: showVideo-2 1.25s forwards;
+    animation: showVideo-2 1.25s forwards;
+  }
+  .video-player {
+    width: 100vw;
+    height: auto;
+  } 
+}
+
+/* Animation for showing the video wrapper */
+@-webkit-keyframes showVideo-1 {
+  50% {
+    width: 50vw;
+    height: 50vw;
+    opacity: 1;
+    -webkit-transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+    transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
+@keyframes showVideo-1 {
+  50% {
+    width: 50vw;
+    height: 50vw;
+    opacity: 1;
+    -webkit-transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+    transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
+/* Alternate animation for showing the video wrapper */
+@-webkit-keyframes showVideo-2 {
+  50% {
+    width: 50vh;
+    height: 50vh;
+    opacity: 1;
+    -webkit-transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+    transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
+@keyframes showVideo-2 {
+  50% {
+    width: 50vh;
+    height: 50vh;
+    opacity: 1;
+    -webkit-transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+    transform: scale3d(0.5,0.5,1) rotate3d(0,0,1,-5deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
+/* Animation for hiding the video wrapper */
+@-webkit-keyframes hideVideo {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
+@keyframes hideVideo {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    -webkit-transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+    transform: scale3d(1,1,1) rotate3d(0,0,1,0deg);
+  }
+}
+
 
 
