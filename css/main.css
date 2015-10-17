@@ -347,16 +347,16 @@ nav a {
     width: 90%;
   }
   p {
-    font-size: 8vw;
+    font-size: 5vw;
   }
   h1 {
-    font-size: 12vw;
-  }
-  h2 {
     font-size: 10vw;
   }
-  h3 {
+  h2 {
     font-size: 8vw;
+  }
+  h3 {
+    font-size: 5vw;
   }
   
   nav {
@@ -366,7 +366,7 @@ nav a {
     margin-top: 1vw;
     margin-bottom: 1vw;
     padding: 2vw;
-    font-size: 12vw;
+    font-size: 6vw;
   }
   .cover h1 {
     padding: 15px;
