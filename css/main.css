@@ -331,7 +331,7 @@ nav a {
   display:flex;
   display:-ms-flexbox;
   flex-direction:column;
-  justify-content:space-between;
+  justify-content:center;
 }
   #section-three .contact-box{
     width: 5vw;
@@ -393,15 +393,21 @@ nav a {
   }
   #section-two .gn-box{
     width: 100%;
-    height: 300px;
-    margin: 20px;
+    height: 280px;
     display:-webkit-flex;
     display:-moz-flex;
     display:flex;
     display:-ms-flexbox;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
+    border: 1px solid red;
+  }
+  /*#section-two .gn-box h2,#section-two .gn-box p,#section-two .gn-box img{
+    border: 1px solid blue;
+  }*/
+  #section-two .gn-box h2{
+    margin: 2vh 0;
   }
    #section-three .contact-box{
     width: 8vw;
