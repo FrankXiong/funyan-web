@@ -111,7 +111,7 @@ a:focus {
 	overflow: hidden;
 	margin: 0;
 	padding: 1em 2em;
-	color: #fff;
+	color: rgba(0,0,244,0.3);
 	border: 2px solid;
 	border-radius: 40px;
 	background: none;
@@ -156,6 +156,7 @@ a:focus {
 	width: 60px;
 	height: 60px;
 	padding: 0;
+	color: #fff;
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
