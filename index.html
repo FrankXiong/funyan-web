@@ -8,11 +8,11 @@
 	<meta name="format-detection" content="telephone=no" >
 	<meta name="apple-mobile-web-app-capable" content="yes" >
 	<meta name="apple-mobile-web-app-status-bar-style" content="white">
-	<title>something here</title>
+	<title>寻声</title>
 	<link rel="icon" type="image/png" href="/static/img/favicon.png">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
+	<meta name="description" content="一个婚礼主持的交流平台">
+	<meta name="keywords" content="婚礼，主持">
+	<meta name="author" content="xiong xianren">
 	<!-- Set render engine for 360 browser -->
 	<meta name="renderer" content="webkit">
 	<!-- No Baidu Siteapp-->
@@ -31,19 +31,21 @@
 </head>
 
 <body id="voice_channel_list">
-<div id='gallery'>
-  <div class='gallery-wrap'>
-    <div class="gallery-box">
+
+<div id='xx_gallery'>
+  <div class='xx_gallery_wrap'>
+    <div class="xx_gallery_box">
     	<img src="/static/img/2.png" alt="2">
 	</div>
-    <div class="gallery-box">
+    <div class="xx_gallery_box">
     	<img src="/static/img/3.png" alt="3">
 	</div>
-    <div class="gallery-box">
+    <div class="xx_gallery_box">
     	<img src="/static/img/4.png" alt="4">
     </div>
   </div>
 </div>
+
 <div class="xx_search">
 	<div class="am-g">
 	  <div class="am-u-lg-6">
@@ -51,35 +53,40 @@
 	      <span class="am-input-group-btn">
 	        <button class="am-btn am-btn-danger" type="button"><span class="am-icon-search"></span></button>
 	      </span>
-	      <input type="text" class="am-form-field">
+	      <input type="text" class="am-form-field" placeholder="搜点什么...">
 	    </div>
 	  </div>
 	</div>
 </div>
+
 <div class="xx_type">
 	<div class="am-g am-container">
     <div class="am-u-lg-12">
 
       <div class="am-g">
-        <div class="am-u-sm-4 detail-mb">
+        <div class="am-u-sm-4">
+        <div class="xx_type_item_box">
           <h3 class="detail-h3">
-            <i class="am-icon-mobile am-icon-sm"></i>
+            
             分类1
           </h3>    
         </div>
-        <div class="am-u-sm-4 detail-mb">
+        </div>
+        <div class="am-u-sm-4">
+        <div class="xx_type_item_box">
           <h3 class="detail-h3">
-            <i class="am-icon-cogs am-icon-sm"></i>
+            
             分类2
           </h3>
         </div>
-        <div class="am-u-sm-4 detail-mb">
+        </div>
+        <div class="am-u-sm-4">
+        <div class="xx_type_item_box">
           <h3 class="detail-h3">
-            <i class="am-icon-check-square-o am-icon-sm"></i>
             分类3
           </h3>
         </div>
-        
+        </div>
       </div>
     </div>
   </div>
@@ -348,22 +355,15 @@
 
 // pure JS
 
-var elem = document.getElementById('gallery');
+var elem = document.getElementById('xx_gallery');
 window.rundiv = Rundiv(elem, {
    hasNav:true,
    startSlide: 1,
    auto: 4000,
    continuous: true,
-  // disableScroll: true,
-  // stopPropagation: true,
-  // callback: function(index, element) {},
-  // transitionEnd: function(index, element) {}
 });
-rundiv.linkNav("rundivNav");    //the id of the ol or ul (if you use this,please make sure hasNav:true)    
 
 
-// with jQuery
-// window.rundiv = $('#rundiv').Rundiv().data('Rundiv');
 
 </script>
 </body>

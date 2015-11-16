@@ -6,16 +6,16 @@ img {
 	width: 100%;
 }
 /*gallery begins*/
-#gallery{
+#xx_gallery{
   overflow: hidden;
   visibility: hidden;
   position: relative;
 }
-.gallery-wrap {
+.xx_gallery_wrap {
   overflow: hidden;
   position: relative;
 }
-.gallery-box {
+.xx_gallery_box {
   float:left;
   width:100%;
   position: relative;
@@ -25,8 +25,18 @@ img {
 .xx_search{
 	margin: 1em 0;
 }
-
-
+.xx_type{
+	margin-bottom: 1em;
+}
+.xx_type_item_box{
+	background-color: lightblue;
+	padding: 1em;
+	border-radius: 3px;
+}
+.detail-h3{
+	text-align: center;
+	margin: 0;
+}
 
 /*list begins*/
 
