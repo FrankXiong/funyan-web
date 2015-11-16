@@ -1,0 +1,42 @@
+body{
+	max-width: 1000px;
+	overflow: hidden;
+}
+img {
+	width: 100%;
+}
+/*gallery begins*/
+#gallery{
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.gallery-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.gallery-box {
+  float:left;
+  width:100%;
+  position: relative;
+}
+/*gallery ends*/
+
+.xx_search{
+	margin: 1em 0;
+}
+
+
+
+/*list begins*/
+
+.am-list-item-text{
+	padding: 0;
+}
+.xx_list_time,.xx_list_read_count{
+	font-size: 80%;
+}
+.xx_list_item_right{
+	padding-left: 1em;
+}
+/*list ends*/
