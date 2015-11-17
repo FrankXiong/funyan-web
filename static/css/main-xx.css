@@ -21,7 +21,7 @@ img {
   position: relative;
 }
 .xx_gallery_box img{
-	max-height: 200px;
+	max-height: 12rem;
 }
 /*gallery ends*/
 
@@ -55,10 +55,10 @@ img {
 }
 .xx_list_item_title{
 	display: inline-block;
-	width: 200px;
+	/*width: 200px;
 	/*标题过长时用省略号代替*/
-	text-overflow:ellipsis;
+	/*text-overflow:ellipsis;
 	white-space:nowrap;
-    overflow:hidden;
+    overflow:hidden;*/
 }
 /*list ends*/
