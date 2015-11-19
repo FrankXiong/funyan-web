@@ -1,370 +1,122 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
+<html>
+  <head>
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="format-detection" content="telephone=no" >
-	<meta name="apple-mobile-web-app-capable" content="yes" >
-	<meta name="apple-mobile-web-app-status-bar-style" content="white">
-	<title>寻声</title>
-	<link rel="icon" type="image/png" href="/static/img/favicon.png">
-	<meta name="description" content="一个婚礼主持的交流平台">
-	<meta name="keywords" content="婚礼，主持">
-	<meta name="author" content="xiong xianren">
-	<!-- Set render engine for 360 browser -->
-	<meta name="renderer" content="webkit">
-	<!-- No Baidu Siteapp-->
-	<meta http-equiv="Cache-Control" content="no-siteapp"/>
-	<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
-	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
-	<META HTTP-EQUIV="expires" CONTENT="0">
-	<link rel="stylesheet" href="/static/css/amazeui.min.css">
-	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <meta name="description" content="Fun言，粤语学习应用">
+    <meta name="keywords" content="Fun言，粤语学习应用">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="img/app_logo.png">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+  
+    <title>Fun言</title>
+  </head>
 
-	<link rel="stylesheet" href="/static/css/main-xx.css">
-	<script src="/static/js/main-xx.js"></script>
-
-	<script src="/static/js/Rundiv.min.js"></script>
-
-</head>
-
-<body id="voice_channel_list">
-
-<div id='xx_gallery'>
-  <div class='xx_gallery_wrap'>
-    <div class="xx_gallery_box">
-    	<img src="/static/img/3.jpg" alt="2">
-	</div>
-    <div class="xx_gallery_box">
-    	<img src="/static/img/2.jpg" alt="3">
-	</div>
-    <div class="xx_gallery_box">
-    	<img src="/static/img/4.jpg" alt="4">
-    </div>
-  </div>
-</div>
-
-<div class="xx_search">
-	<div class="am-g">
-	  <div class="am-u-lg-6">
-	    <div class="am-input-group am-input-group-danger">
-	      <span class="am-input-group-btn">
-	        <button class="am-btn am-btn-danger" type="button"><span class="am-icon-search"></span></button>
-	      </span>
-	      <input type="text" class="am-form-field" placeholder="搜点什么...">
-	    </div>
-	  </div>
-	</div>
-</div>
-
-<div class="xx_type">
-	<div class="am-g am-container">
-    <div class="am-u-lg-12">
-
-      <div class="am-g">
-        <div class="am-u-sm-4">
-        <div class="xx_type_item_box">
-          <h3 class="detail-h3">
-            
-            分类1
-          </h3>    
+  <body>
+      <nav>
+        <a href="#"><h3>首页</h3></a>
+        <a href="#section-one"><h3>简介</h3></a>
+        <a href="#section-two"><h3>功能</h3></a>
+        <a href="#section-three"><h3>联系</h3></a>
+        <a href="http://www.wandoujia.com/apps/com.xiongxianren.funyan"><h3>下载</h3></a>
+      </nav>
+      <section id="cover" class="cover">
+        <!-- <div id="logo">
+          <img src="img/blacktocat.png" alt="logo">
+        </div> -->
+        <h1>Fun言</h1>
+        <p>一款基于Android的粤语学习应用</p>
+        <a href="http://www.wandoujia.com/apps/com.xiongxianren.funyan" class="btn download"><h3>下载</h3></a>
+        <a href="#section-one" class="btn more"><h3>了解更多</h3></a>
+      </section>
+      <section id="section-one" class="content">
+        <div class="section-box">
+          <h1>简介</h1>
+          <!-- <img src="img/app_logo.png"> -->
+          <p>在“Fun言”中，我们改变枯燥的教学方式。</p>
+          <p>将学习、翻译和社交融合在一起，创造出寓教于乐的学习体验</p>
+          <p>集成了方言语音识别服务</p>
+          <p>支持广东、四川等6种方言的实时翻译</p>
+          <p><a href="video.html" class="watch-video">观看演示视频<i class="fa fa-film"></i></a></p>
         </div>
-        </div>
-        <div class="am-u-sm-4">
-        <div class="xx_type_item_box">
-          <h3 class="detail-h3">
-            
-            分类2
-          </h3>
-        </div>
-        </div>
-        <div class="am-u-sm-4">
-        <div class="xx_type_item_box">
-          <h3 class="detail-h3">
-            分类3
-          </h3>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="xx_list">
-  <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
-  <div class="am-list-news-bd">
-  <ul class="am-list">
-     <!--缩略图在标题左边-->
-      <li class="am-g am-g-fixed am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11614662/" class="">
-            <img src="/static/img/thumb0.jpg" alt="thumb0"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题过长标题过长标题过长标题过长标题过长标题过长标题过长标题过长</a></h3>
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
+      </section>
+      
 
 
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
+      <section id="section-two" class="content">
+        <div class="section-box">
+            <h1>功能</h1>
+            <h3>集翻译、学习、社交三大元素于一体,帮助用户快速学习粤语</h3>
+          <div class="gn-box-wrapper">
+            <div class="gn-box">
+              <img src="img/ic-fanyi.png" alt="">
+              <h2>语音翻译</h2>
+              <p>将方言语音或文本，实时翻译为普通话。</p>
+              </div>
+            <div class="gn-box">
+              <img src="img/ic-study.png" alt="">
+              <h2>语音教学</h2>
+              <p>包含日常对话、粤语听书、歌曲三大板块。</p>
+            </div>
+            <div class="gn-box">
+              <img src="img/ic-video.png" alt="">
+              <h2>视频教学</h2>
+              <p>精心选取并每日推送粤语教学视频。</p>
+            </div>
+          </div>
+          <div class="gn-box-wrapper">
+            <div class="gn-box">
+              <img src="img/ic-pengyouquan.png" alt="">
+              <h2>方言角</h2>
+              <p>可在这里发布状态，结交好友，点赞等，在学习中认识新朋友。</p>
+            </div>
+            <div class="gn-box">
+              <img src="img/ic-exam.png" alt="">
+              <h2>方言测试</h2>
+              <p>提供了一套粤语能力测试题目，供用户测验学习掌握情况。</p>
+            </div>
+            <div class="gn-box">
+              <img src="img/ic-article.png" alt="">
+              <h2>每日文摘</h2>
+              <p>精选每日趣文，融合社交分享，为用户提供更全方位的学习体验。</p>
+            </div>
+          </div>
+        </div> 
+        
+      </section>
+      <section id="section-four" class="content">
+        <div class="section-box">
+          <h1>用户说</h1>
+          <div class="user-evaluate-box">
+            <p class="user-words">"我最喜欢语音翻译的功能，语音翻译可以帮我矫正我的发音，我录入的语音如果显示正确，我就很开心。"</p>
+            <p class="user-name">- 张同学（重庆医科大学）-</p>
+          </div>
+          <div class="user-evaluate-box">
+            <p class="user-words">"我试了把我想学的话合成语音，听多了慢慢地可以说出来。这是一个很有创意的想法。"</p>
+            <p class="user-name">- 乔同学（重庆大学）-</p>
+          </div>
 
         </div>
-      </li>
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="/static/img/thumb.jpg" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
+      </section>
+      <section id="section-three" class="content">
+        <div class="section-box">
+          <h1>联系</h1>
+          <div class="contact-box-wrapper">
+            <!-- <div class="contact-box"><img src="img/qq.png"></div> -->
+            <div class="contact-box"><a href="http://weibo.com/u/2892202502"><img src="img/weibo.png"></a></div>
+            <div class="contact-box"><a href="Mailto:xianren_xiong@163.com" id="email"><img src="img/email.png"></a></div>
+          </div>
+        </div>
+      </section>
+        <div class="footer">
+          <p>
+              Copyright &nbsp;&copy;2015 &nbsp;Fun言
+          </p>
+          <p>&nbsp;&nbsp;问题咨询&更多建议：&nbsp; <a href="mailto:xianren_xiong@163.com">xianren_xiong@163.com</a></p>
         </div>
 
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-
-      <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
-        <div class="am-u-sm-4 am-list-thumb">
-          <a href="http://www.douban.com/online/11624755/" class="">
-            <img src="/static/img/thumb.jpg" alt="我最喜欢的一张画"/>
-          </a>
-        </div>
-
-        <div class=" am-u-sm-8 am-list-main">
-            <h3 class="am-list-item-hd"><a href="/static/img/thumb.jpg" class="xx_list_item_title">标题</a></h3>
-
-            <div class="am-list-item-text am-u-sm-4 xx_list_item_info " >
-		            <span>作者：</span>
-		            <span class="xx_list_author">XXX</span>
-		         </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>发布时间：</span>
-		            <span class="xx_list_time">2015.11.11</span>
-	            </div>
-
-
-	            <div class="am-list-item-text am-u-sm-4 xx_list_item_info">
-		            <span>分类：</span>
-		            <span class="xx_list_type">XXX</span>
-	            </div>
-	            <div class="am-list-item-text am-u-sm-8 xx_list_item_right">
-		            <span>阅读量：</span>
-		            <span class="xx_list_read_count">1000</span>
-	            </div>
-
-        </div>
-      </li>
-
-    
-    </ul>
-  </div>
-</div>
-</div>
-
-
-<div class="xx_pagination">
-    <ul data-am-widget="pagination" class="am-pagination am-pagination-select">
-        <li class="am-pagination-prev ">
-        	<a href="#" class="">上一页</a>
-        </li>
-	    <li class="am-pagination-select">
-	      <select>
-	          <option value="#" class="">1
-	            / 3
-	          </option>
-	          <option value="#" class="">2
-	            / 3
-	          </option>
-	          <option value="#" class="">3
-	            / 3
-	          </option>
-	      </select>
-	    </li>
-	    <li class="am-pagination-next ">
-	    	<a href="#" class="">下一页</a>
-	    </li>
-    </ul>
-</div>
-
-
-<script>
-
-// pure JS
-
-var elem = document.getElementById('xx_gallery');
-window.rundiv = Rundiv(elem, {
-   hasNav:true,
-   startSlide: 1,
-   auto: 4000,
-   continuous: true,
-});
-
-
-
-</script>
-</body>
+  </body>
 </html>
