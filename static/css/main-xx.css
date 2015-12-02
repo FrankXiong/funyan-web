@@ -1,0 +1,104 @@
+body{
+	max-width: 1000px;
+
+}
+img {
+	width: 100%;
+}
+/*gallery begins*/
+#xx_gallery{
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.xx_gallery_wrap {
+  overflow: hidden;
+  position: relative;
+}
+.xx_gallery_box {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+/*gallery ends*/
+
+.xx_search{
+	margin: 1em 0;
+}
+.xx_type{
+	margin-bottom: 1em;
+}
+.am-g{
+
+}
+.xx_type_item_box{
+	/*background-color: rgba(51,51,51,1);*/
+	padding: 10px 2px;
+	/*border-radius: 3px;*/
+	color:#333;
+
+}
+.xx_type_item_title{
+	text-align: center;
+	margin: 0;
+	font-size: 11px;
+}
+
+/*list begins*/
+
+.am-list-item-text{
+	padding: 0;
+}
+.xx_list_time,.xx_list_read_count{
+	font-size: 80%;
+}
+.xx_list_item_info,.xx_list_item_title{
+	padding-left: 5px;
+}
+
+
+
+
+/*list ends*/
+
+.xx_reset{
+	padding: 0;
+}
+
+.xx_type_hide{
+	z-index: 2;
+	position: absolute;
+	background-color: rgba(255,255,255,0.95);
+	width: 100%;
+	border-radius: 3px;
+	/*border: 1px solid red;*/
+
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	/*清除amaze默认margin*/
+	margin-left: -1.2rem;
+	visibility: hidden;
+}
+#xx_type_drop{
+	padding-top: 5px;
+}
+.am-container{
+	/*border: 1px solid red;*/
+}
+.xx_type_show{
+	/*border: 1px solid red;*/
+	position: relative;
+	left: -0.2rem;
+}
+.xx_page{
+	overflow: hidden;
+}
+.xx_page ul{
+	padding: 0;
+	margin: 0;
+}
+.xx_page_num{
+	list-style: none;
+	display: inline-block;
+	line-height: 36px;
+}
