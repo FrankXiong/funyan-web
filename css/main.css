@@ -71,6 +71,7 @@ section {
 /*navigation start*/
 
 nav {
+  font-size: 0;
   padding-top: 1vw;
   padding-bottom: 1vw;
   background-color: rgba(0, 0, 0, 0.7);
@@ -96,6 +97,11 @@ nav a {
 
 nav a:first-child {
   border-left: none;
+}
+
+nav a p {
+  font-size: 18px;
+  padding: 0;
 }
 
 
@@ -241,16 +247,17 @@ nav a:first-child {
   margin: 0 auto;
 }
 
-#section-two .gn-box p {
+.gn-box h2 {
+  padding: 5px 0;
+}
+
+.gn-box p {
   text-align: center;
   padding: 10px;
 }
 
 #section-two .gn-box-wrapper {
-  display: -webkit-flex;
-  display: -moz-flex;
   display: flex;
-  display: -ms-flexbox;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -283,17 +290,11 @@ nav a:first-child {
 
 @media all and (min-width: 720px) {
   p {
-    font-size: 14px;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   nav {
-    padding: 1vw;
-    font-size: 0;
-  }
-  nav a {
-    padding: 1vw;
-    font-size: 18px;
+    padding: 10px;
   }
   .cover {
     background-image: url(../img/bg.png);
@@ -341,7 +342,6 @@ nav a:first-child {
     padding: 5px;
   }
   nav {
-    font-size: 0;
     padding: 10px 0;
   }
   nav a {
@@ -385,9 +385,6 @@ nav a:first-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .gn-box h2 {
-    padding: 5px 0;
   }
   .footer {
     height: 12vh;
