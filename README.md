@@ -1,5 +1,5 @@
 # "Fun言" App 宣传页
-点击我进入 App 介绍页：http://frankxiong.github.io/funyan-web
+点击我进入 App 介绍页：https://frankxiong.github.io/funyan-web
 
 App 下载地址：http://www.wandoujia.com/apps/com.xiongxianren.funyan
 
